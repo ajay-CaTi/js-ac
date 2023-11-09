@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Hello bro</h1>
+    <!-- 
+      1.
+       <h1>
+      Apna <br />
+      College
+    </h1> 
+  2.
+  -->
+
+    <!-- DECENDENT means DADA->parent->children  meand DIVE ke andar kitne bhi level under-->
+
+    <!-- Adjacent selector MEANS p + h3 immediately under h3 not inside like  bhai bhai -->
+
+    <!-- child combinator soan>button means span ke aandar all buttons only one level -->
+
+    <!-- attribute selector input[type="text"] input[type] -->
+    <!-- div p[id="myId"] -->
+
+    <!-- -- ------------********************* -->
+    <!-- -- ------------********************* -->
+
+    <!-- PSEUDO elements
+      
+      h1::first-letter{
+        color:"red";
+      }
+      
+      h1::first-line{
+        color:"blue";
+      }
+      
+      h1::selection{
+        background-color:"saffron";
+      }
+      
+    -->
+
+    <!-- -- ------------********************* -->
+
+    <!-- -- ------------********************* -->
+
+    <!-- PSEUDO class 
+    
+    :hover
+    :active
+    :checked
+    :nth-of-type
+    
+IMPORTANT
+
+    button:active{
+      background-color:"brown";
+    }
+    
+jese hi tck box ko click kere vese hi
+
+ input[type="text"]:checked +label{
+  color:"red"
+ }
+
+ :nth-of-type
+
+ COLOR VALI WEBSITE
+
+ mycolor.space
+ coolers.co
+    
+    -->
+
+    <!-- 2.  
+      
+      <div class="div">
+        <section>
+          <section id="red"></section>
+          <section id="yellow"></section>
+          <section id="green"></section>
+        </section>
+      </div>
+    
+    
+    -->
+    <!-- <h1 class="heading">box</h1>
+    <div id="outer">
+      <div id="inner"></div>
+    </div> -->
+
+    <!-- transition:1s inside 
+      transition-duration:1s
+      transition-delay:1s
+      transition-timing-function: liner, ease steps, cube
+
+      IMPORTANT
+      IMPORTANT
+      
+      short-hand
+
+      transition: margin-top 2s ease-in-out 0.2s 
+      
+      parent aaram see convert one state to another  -->
+    <!-- <h1 id="head" class="heading h1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, minus?
+    </h1>
+
+    <p id="para" class="cl lorem">
+      Lorem ipsum, dolor sit amet consectetur <br />
+      adipisicing elit. Ipsa molestias eum recusandae facilis, <br />
+      voluptatibus vel ducimus vitae quia. Consectetur quidem itaque magni
+      <br />
+      in repudiandae quaerat ipsum perferendis <br />
+      minima perspiciatisamet <br />
+      porro ea quia provident <br />
+      cum, minima alias laudantium veritatis eveniet
+      <br />
+      exercitationem reprehenderit ut, <br />
+      sequi, nam tenetur. Impedit quae dignissimos <br />
+      quo illum illo error magni cumque.
+    </p> -->
+
+    <!-- <p id="para" class="cl lorem">
+      Lorem ipsum, dolor sit amet consectetur <br />
+      adipisicing elit. Ipsa molestias eum recusandae facilis, <br />
+      voluptatibus vel ducimus vitae quia. Consectetur quidem itaque magni
+      <br />
+      in repudiandae quaerat ipsum perferendis <br />
+      minima perspiciatisamet <br />
+      porro ea quia provident <br />
+      cum, minima alias laudantium veritatis eveniet
+      <br />
+      exercitationem reprehenderit ut, <br />
+      sequi, nam tenetur. Impedit quae dignissimos <br />
+      quo illum illo error magni cumque.
+    </p>
+
+    <p id="para" class="cl lorem">
+      Lorem ipsum, dolor sit amet consectetur <br />
+      adipisicing elit. Ipsa molestias eum recusandae facilis, <br />
+      voluptatibus vel ducimus vitae quia. Consectetur quidem itaque magni
+      <br />
+      in repudiandae quaerat ipsum perferendis <br />
+      minima perspiciatisamet <br />
+      porro ea quia provident <br />
+      cum, minima alias laudantium veritatis eveniet
+      <br />
+      exercitationem reprehenderit ut, <br />
+      sequi, nam tenetur. Impedit quae dignissimos <br />
+      quo illum illo error magni cumque.
+    </p>
+
+    <p id="para" class="cl lorem">
+      Lorem ipsum, dolor sit amet consectetur <br />
+      adipisicing elit. Ipsa molestias eum recusandae facilis, <br />
+      voluptatibus vel ducimus vitae quia. Consectetur quidem itaque magni
+      <br />
+      in repudiandae quaerat ipsum perferendis <br />
+      minima perspiciatisamet <br />
+      porro ea quia provident <br />
+      cum, minima alias laudantium veritatis eveniet
+      <br />
+      exercitationem reprehenderit ut, <br />
+      sequi, nam tenetur. Impedit quae dignissimos <br />
+      quo illum illo error magni cumque.
+    </p> -->
+
+    <!-- <form action="/action">
+      <input type="text" name="" id="" /> <br />
+      <input type="email" name="" id="" /> <br />
+      <button type="submit">submit</button>
+    </form> -->
+
+    <!-- <input type="text" />
+    <img src="./hjh/tr" alt="" /> -->
+    <!-- <button class="btn">Dice Roll</button>
+    <button class="ho">Dice Roll</button>
+    <button class="ho">Dice Roll</button>
+    <button class="ho">Dice Roll</button> -->
+
+    <!-- todo  -->
+
+    <!-- <h1>Todo app</h1>
+    <input type="text" placeholder="enter your task" />
+    <button>Add task</button>
+    <ul>
+      <li>Mango <button class="delete">delete</button></li>
+    </ul> -->
+
+    <!-- SIMON GAME  -->
+
+    <!-- <div class="body">
+      <h1>Simon Game</h1>
+      <h2>press any key to start game</h2>
+      <div class="btn-container">
+        <div class="line-one">
+          <div type="button" id="red" class="btnn red">1</div>
+          <div type="button" id="yellow" class="btnn yellow">2</div>
+        </div>
+        <div class="line-two">
+          <div type="button" id="green" class="btnn green">3</div>
+          <div type="button" id="purple" class="btnn purple">4</div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- SIMON GAME  -->
+
+    <!-- EVENT BUBBLING  -->
+    <!-- <div class="div">
+      <ul class="ul">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </div> -->
+    <!-- as soon we click on nested element, automatically it will trigger its parent event listener -->
+
+    <!-- EVENT BUBBLING  -->
+
+    <!-- To Do App -->
+
+    <!-- <h1>Todo App</h1>
+    <input type="text" placeholder="Eneter here" id="" />
+    <button>Submit</button>
+    <ul>
+      <li>Mango <button class="delete">delete</button></li>
+      <li>Lichi <button class="delete">delete</button></li>
+    </ul> -->
+
+    <!-- To Do App -->
+    <script defer src="./promiseFinal.js"></script>
+  </body>
+</html>

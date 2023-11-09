@@ -1,0 +1,129 @@
+/*
+
+1.
+
+h1 {
+  color: #ffa511;
+  text-align: center;
+  font-size: 55px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-decoration: teal double underline;
+  background-color: white;
+} 
+
+end
+*/
+
+/* ---------------******************** */
+/* ---------------******************** */
+
+/* street light  
+
+section {
+  border: 1px solid black;
+  margin: auto;
+  width: 100px;
+  height: 280px;
+}
+
+section > section {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 15px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+end
+*/
+
+/* ---------------******************** */
+/* ---------------******************** */
+
+.heading {
+  border: 1px solid black;
+}
+
+#outer {
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  margin: 20px;
+}
+
+#inner {
+  width: 20%;
+  height: 20%;
+  background-color: pink;
+  margin-left: 20%;
+}
+
+.div {
+  background-color: pink;
+  height: 200px;
+  width: 400px;
+}
+
+.ul {
+  background-color: blue;
+}
+
+.ul li {
+  background-color: greenyellow;
+}
+
+/* simon game  */
+
+.body {
+  text-align: center;
+}
+
+.btnn {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 10px solid black;
+  margin: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.purple {
+  background-color: purple;
+}
+
+.flash {
+  background-color: white;
+}
+
+.userFlash {
+  background-color: orange;
+}
