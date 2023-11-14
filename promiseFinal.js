@@ -9,9 +9,11 @@ function changeColor(color, delay) {
 }
 
 changeColor("red", 1000)
-  .then(() => {
-    console.log("red color changed");
-    return changeColor("green", 1000);
+  .then((res) => {
+    console.log(res, "red color changed");
+    return changeColor("green", 1000).then((res) =>
+      console.log("Resolve ho gaya", res)
+    );
   })
   .then(() => {
     console.log("red color changed");

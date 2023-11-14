@@ -8,6 +8,21 @@ function saveDb(data, success, failed) {
     failed();
   }
 }
+
+// 1.
+
+// saveDb(
+//   "bro",
+//   () => {
+//     console.log("sucess: data saved");
+//   },
+//   () => {
+//     console.log("failed:data failed");
+//   }
+// );
+
+// 2. NOW make dependency if one is inserted then another goes
+
 saveDb(
   "bro",
   () => {
@@ -15,23 +30,23 @@ saveDb(
     saveDb(
       "hello World",
       () => {
-        console.log("success2: Data is Saved!");
+        console.log("success3: Data is Saved!");
         saveDb(
           "hello World",
           () => {
-            console.log("success3: Data is Saved!");
+            console.log("success4: Data is Saved!");
           },
           () => {
-            console.log("failure3: Data not Save!");
+            console.log("failure5: Data not Save!");
           }
         );
       },
       () => {
-        console.log("failure2: Data not Save!");
+        console.log("failure6: Data not Save!");
       }
     );
   },
   () => {
-    console.log("failure: Data is Not save week connection!");
+    console.log("failure7: Data is Not save week connection!");
   }
 );

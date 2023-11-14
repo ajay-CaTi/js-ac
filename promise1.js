@@ -47,6 +47,7 @@ function saveDb(data) {
 //   })
 //   .catch(() => {
 //     console.log("Promise rejected");
+//     console.log(request);
 //   });
 // console.log(request);
 

@@ -1,0 +1,18 @@
+<%- include("includes/head.ejs") %>
+<body>
+  <h1>Insta page</h1>
+    <h2 style="text-align: center">
+      Welcome <%= username %> <button>Follow</button> <button>Message</button>
+    </h2>
+    <h3>Followers</h3>
+    <div>
+      <% for (const obj of posts) { %>
+      <h2><%= obj.title %></h2>
+      <h3>Followers:- <%= obj.followers %></h3>
+      <h3>Follow:- <%= obj.follow %></h3>
+      <p><%= obj.body %></p>
+      <% } %>
+    </div>
+  </body>
+  <%- include("includes/footer.ejs") %>
+</html>

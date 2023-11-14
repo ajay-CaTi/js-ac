@@ -34,24 +34,42 @@ let h1 = document.querySelector("h1");
 
 // 3. NOT possible
 
-function changeColor(color, delay, nextColorChange) {
-  setTimeout(() => {
-    h1.style.color = color;
-    nextColorChange();
-  }, delay);
-  h1.style.color = color;
-}
+// function call(color, delay) {
+//   setTimeout(() => {
+//     h1.style.color = color;
+//   }, delay);
+//   setTimeout(() => {
+//     h1.style.color = color;
+//   }, delay);
+//   setTimeout(() => {
+//     h1.style.color = color;
+//   }, delay);
+// }
+
+// call("red", 1000);
+// call("green", 2000);
+// call("yellow", 3000);
+
+// 4. And Nowwwww...
+
+// function changeColor(color, delay, nextColorChange) {
+//   setTimeout(() => {
+//     h1.style.color = color;
+//     nextColorChange();
+//   }, delay);
+//   h1.style.color = color;
+// }
 
 // NESTING in call back ::-- callback HELL
 
-changeColor("red", 1000, () => {
-  changeColor("blue", 1000, () => {
-    changeColor("green", 1000, () => {
-      changeColor("pink", 1000, () => {
-        changeColor("brown", 1000);
-      });
-    });
-  });
-});
+// changeColor("red", 1000, () => {
+//   changeColor("blue", 1000, () => {
+//     changeColor("green", 1000, () => {
+//       changeColor("pink", 1000, () => {
+//         changeColor("brown", 1000);
+//       });
+//     });
+//   });
+// });
 
 // Prevent from Callback Hell USE PRomise , Async Await

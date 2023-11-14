@@ -33,7 +33,7 @@
 // }
 
 // function levelUp() {
-//   userSeq = []; // added just to enter value from start
+//   userSeq = []; // added just to enter value from start 3rd part
 //   level++;
 //   h2.innerText = `Level ${level}`;
 
@@ -149,7 +149,7 @@ function checkAns(idx) {
 }
 
 function btnPress() {
-  // console.log("btn was pressed", this);
+  console.log("btn was pressed", this);
   let btn = this;
   userFlash(btn);
 
