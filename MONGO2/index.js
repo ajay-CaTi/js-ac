@@ -36,15 +36,14 @@ async function main() {
 
 //   Index route
 
-app.get("/chats", async (req, res, next) => {
-  try {
+app.get(
+  "/chats",
+  asyncWrap(async (req, res, next) => {
     let chats = await Chat.find();
     console.log(chats);
     res.render("index", { chats });
-  } catch (error) {
-    next(error);
-  }
-});
+  })
+);
 
 // NEW ROUTE
 app.get("/chats/new", (req, res) => {
@@ -53,8 +52,9 @@ app.get("/chats/new", (req, res) => {
 });
 
 // create route  use express.json()
-app.post("/chats", async (req, res, next) => {
-  try {
+app.post(
+  "/chats",
+  asyncWrap(async (req, res, next) => {
     let { from, to, msg } = req.body;
     let newChat = new Chat({
       from: from,
@@ -64,14 +64,19 @@ app.post("/chats", async (req, res, next) => {
     });
     await newChat.save();
     res.render("/chats");
-  } catch (error) {
-    next(error);
-  }
-});
+  })
+);
+
+function asyncWrap(fn) {
+  return function (req, res, next) {
+    fn(req, res, next).catch((err) => next(err));
+  };
+}
 
 // edit ROUTE SHOW
-app.get("/chats/:id", async (req, res, next) => {
-  try {
+app.get(
+  "/chats/:id",
+  asyncWrap(async (req, res, next) => {
     let { id } = req.params;
     let chat = await Chat.findById(id);
     if (!chat) {
@@ -80,13 +85,12 @@ app.get("/chats/:id", async (req, res, next) => {
     }
     console.log(chat);
     res.render("edit", { chat });
-  } catch (error) {
-    next(error);
-  }
-});
+  })
+);
 
-app.put("/chats/:id", async (req, res, next) => {
-  try {
+app.put(
+  "/chats/:id",
+  asyncWrap(async (req, res, next) => {
     let { id } = req.params;
     let { msg } = req.body;
     let updatedChat = await Chat.findByIdAndUpdate(
@@ -96,23 +100,20 @@ app.put("/chats/:id", async (req, res, next) => {
     );
     console.log(updatedChat);
     res.redirect("/chats");
-  } catch (error) {
-    next(error);
-  }
-});
+  })
+);
 
 // Delete chats
 
-app.delete("/chats/:id", async (req, res, next) => {
-  try {
+app.delete(
+  "/chats/:id",
+  asyncWrap(async (req, res, next) => {
     let { id } = req.params;
     let delChat = await Chat.findByIdAndDelete(id);
     console.log(delChat);
     res.redirect("/chats");
-  } catch (error) {
-    next(error);
-  }
-});
+  })
+);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
