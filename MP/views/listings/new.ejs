@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+  </head> -->
+<% layout('/layouts/boilerplate') %>
+<body>
+  <h1>Add New Listing</h1>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form method="POST" action="/listing">
+        <div>
+          <label for="title" class="form-label">Title</label>
+          <input
+            class="form-control"
+            placeholder="enter title"
+            type="text"
+            name="listing[title]"
+          />
+        </div>
+        <div>
+          <label for="description" class="form-label">Title</label>
+          <textarea
+            class="form-control"
+            name="listing[description]"
+            cols="20"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <div class="row">
+          <div class="mb-2 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input
+              class="form-control"
+              placeholder="1200"
+              type="number"
+              name="listing[price]"
+            />
+          </div>
+
+          <div class="mb-2 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              class="form-control"
+              name="listing[country]"
+              placeholder="India"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="image" class="form-label">Image</label>
+          <input
+            type="text"
+            class="form-control"
+            name="listing[image]"
+            placeholder="enter image url/link"
+          />
+        </div>
+
+        <div>
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            name="listing[location]"
+            placeholder="jaipur, Rajasthan"
+          />
+        </div>
+
+        <button class="btn btn-dark mt-2 ad-btn" type="submit">submit</button>
+        <br />
+        <br />
+      </form>
+    </div>
+  </div>
+</body>
+<!-- </html> -->
