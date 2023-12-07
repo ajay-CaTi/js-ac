@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>All listings</h1>
+    <a href="/listings/new"><button>Add new Listing</button></a>
+    <ul>
+      <%for (const listing of listings) {%>
+      <li><a href="/listings/<%=listing._id%>"><%= listing.title %></a></li>
+      <%}%>
+    </ul>
+  </body>
+</html>
+
+<!--
+  next js(next js)
+  hooks
+react redux
+formik
+react query scroll
+   react visulization 
+react spring css
+  react testing lib tdd
+ts
+react native
+-->

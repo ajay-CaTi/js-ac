@@ -14,3 +14,5 @@ Help in craeting templeate and layout
 # EJS
 
 Build dynamic templete
+
+# Cross scripting attacks

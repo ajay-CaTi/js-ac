@@ -1,0 +1,104 @@
+<% layout('/layouts/boilerplate.ejs') %>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <form
+      method="post"
+      class="needs-validation"
+      action="/listings/<%=listing._id %>?_method=PUT"
+      novalidate
+    >
+      <label class="form-label" for="title">Title</label>
+      <input
+        class="form-control"
+        type="text"
+        name="listing[title]"
+        required
+        placeholder="best place name here.."
+        value="<%=listing.title %>"
+      />
+      <div class="valid-feedback">Looks Good</div>
+      <div class="invalid-feedback">plz enter this field</div>
+
+      <br />
+      <br />
+
+      <label class="form-label" for="description">Description</label>
+      <textarea
+        class="form-control"
+        name="listing[description]"
+        required
+        placeholder="type here.."
+        cols="30"
+        rows="4"
+      >
+<%=listing.description %></textarea
+      >
+      <div class="valid-feedback">Looks Good</div>
+      <div class="invalid-feedback">plz enter this field</div>
+      <br />
+      <br />
+
+      <label class="form-label" for="image">Image url</label>
+      <input
+        class="form-control"
+        type="text"
+        name="listing[image]"
+        required
+        placeholder="image url"
+        value="<%=listing.image %>"
+      />
+      <div class="valid-feedback">Looks Good</div>
+      <div class="invalid-feedback">plz enter this field</div>
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-label" for="price">Price</label>
+          <input
+            class="form-control"
+            type="number"
+            name="listing[price]"
+            required
+            placeholder="1200"
+            value="<%=listing.price %>"
+          />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">plz enter this field</div>
+        </div>
+        <br />
+        <div class="col-md-8">
+          <label class="form-label" for="location">Location</label>
+          <input
+            class="form-control"
+            type="text"
+            name="listing[location]"
+            required
+            placeholder="jaselmer Rajasthan"
+            value="<%=listing.location %>"
+          />
+          <div class="valid-feedback">Looks Good</div>
+          <div class="invalid-feedback">plz enter this field</div>
+        </div>
+      </div>
+      <br />
+
+      <label class="form-label" for="country">Country</label>
+      <input
+        class="form-control"
+        type="text"
+        name="listing[country]"
+        required
+        placeholder="India"
+        value="<%=listing.country %>"
+      />
+      <div class="valid-feedback">Looks Good</div>
+      <div class="invalid-feedback">plz enter this field</div>
+      <br />
+      <br />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br />
+  </div>
+</div>

@@ -10,7 +10,12 @@
   <h1>Edit Listning</h1>
   <div class="row">
     <div class="col-8 offset-2">
-      <form method="POST" action="/listing/<%=listing._id%>?_method=PUT">
+      <form
+        class="needs-validation"
+        novalidate
+        method="POST"
+        action="/listing/<%=listing._id%>?_method=PUT"
+      >
         <div>
           <label for="title" class="form-label">Title</label>
           <input
@@ -19,7 +24,10 @@
             name="listing[title]"
             class="form-control"
             placeholder="enter title"
+            required
           />
+          <div class="invalid-feedback">Please choose a title.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div>
@@ -29,55 +37,71 @@
             name="listing[description]"
             cols="20"
             rows="10"
+            required
           >
   <%=listing.description%></textarea
           >
+          <div class="invalid-feedback">Please write some text here.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div class="row">
           <div class="mb-2 col-md-4">
             <label for="price" class="form-label">Price</label>
             <input
+              required
               class="form-control"
               value="<%=listing.price%>"
               type="number"
               name="listing[price]"
               placeholder="enter price"
             />
+            <div class="invalid-feedback">Please enter a valid price.</div>
+            <div class="valid-feedback">Looks good!</div>
           </div>
 
           <div class="mb-2 col-md-8">
             <label for="country" class="form-label">Country</label>
             <input
+              required
               class="form-control"
               value="<%=listing.country%>"
               type="text"
               name="listing[country]"
               placeholder="enter country"
             />
+            <div class="invalid-feedback">Please enter country.</div>
+            <div class="valid-feedback">Looks good!</div>
           </div>
         </div>
+        <!-- </div> -->
 
         <div>
           <label for="image" class="form-label">Image</label>
           <input
+            required
             value="<%=listing.image%>"
             type="text"
             class="form-control"
             name="listing[image]"
             placeholder="enter image"
           />
+          <div class="invalid-feedback">Please enter image url link.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div>
           <label for="location" class="form-label">Location</label>
           <input
+            required
             value="<%=listing.location%>"
             type="text"
             class="form-control"
             name="listing[location]"
             placeholder="enter location"
           />
+          <div class="invalid-feedback">Please enter location.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <button class="btn btn-dark mt-2 ad-btn" type="submit">submit</button>

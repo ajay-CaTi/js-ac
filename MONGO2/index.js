@@ -67,6 +67,21 @@ app.post(
   })
 );
 
+const handleValidationError = (err) => {
+  console.log("this was a validation error plz follow rules");
+  console.dir(err.message);
+  return err;
+};
+
+app.use((err, req, res, next) => {
+  console.log(err.name);
+  if (err.name === "ValidationError") {
+    err = handleValidationError(err);
+  }
+  next(err);
+});
+
+// ERROR handler Middleware
 function asyncWrap(fn) {
   return function (req, res, next) {
     fn(req, res, next).catch((err) => next(err));

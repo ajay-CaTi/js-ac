@@ -1,0 +1,33 @@
+<% layout('/layouts/boilerplate.ejs') %>
+<body>
+  <!-- <form method="get" action="/listings/new">
+    <button type="submit">Add new listing</button>
+  </form> -->
+
+  <h2>Listings</h2>
+  <h3>Total listings:- <%=listings.length %></h3>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <%for (const listing of listings) { %>
+    <a class="list-link" href="/listings/<%=listing._id %>">
+      <div class="card listing-card" style="width: 18rem">
+        <img
+          style="height: 18rem"
+          src="<%=listing.image %>"
+          class="card-img-top"
+          alt="<%=listing.title %>"
+        />
+        <div class="card-img-overlay">abc</div>
+        <div class="card-body">
+          <p class="card-text">
+            <strong
+              ><%=listing.title %> <br />
+              &#8377; <%=listing.price.toLocaleString("en-IN") %> /
+              night</strong
+            >
+          </p>
+        </div>
+      </div>
+    </a>
+    <% }%>
+  </div>
+</body>

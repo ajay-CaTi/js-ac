@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-const listeningSchema = mongoose.Schema({
+const { Schema } = mongoose;
+const listeningSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String },
   image: {
@@ -15,6 +15,12 @@ const listeningSchema = mongoose.Schema({
   price: { type: Number },
   location: { type: String },
   country: { type: String },
+  reviews: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Review",
+    },
+  ],
 });
 
 const Listing = mongoose.model("Listing", listeningSchema);

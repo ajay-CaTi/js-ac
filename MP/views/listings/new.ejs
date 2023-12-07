@@ -10,66 +10,84 @@
   <h1>Add New Listing</h1>
   <div class="row">
     <div class="col-8 offset-2">
-      <form method="POST" action="/listing">
+      <form method="POST" action="/listing" class="needs-validation" novalidate>
         <div>
           <label for="title" class="form-label">Title</label>
           <input
+            required
             class="form-control"
             placeholder="enter title"
             type="text"
             name="listing[title]"
           />
+          <div class="invalid-feedback">Please choose a title.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
         <div>
-          <label for="description" class="form-label">Title</label>
+          <label for="description" class="form-label">Description</label>
           <textarea
+            required
             class="form-control"
             name="listing[description]"
             cols="20"
             rows="5"
+            placeholder="description here"
           ></textarea>
+          <div class="invalid-feedback">Please write some text here.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div class="row">
           <div class="mb-2 col-md-4">
             <label for="price" class="form-label">Price</label>
             <input
+              required
               class="form-control"
               placeholder="1200"
-              type="number"
               name="listing[price]"
             />
+            <div class="invalid-feedback">Please enter a valid price.</div>
+            <div class="valid-feedback">Looks good!</div>
           </div>
 
           <div class="mb-2 col-md-8">
             <label for="country" class="form-label">Country</label>
             <input
+              required
               type="text"
               class="form-control"
               name="listing[country]"
               placeholder="India"
             />
+            <div class="invalid-feedback">Please enter country.</div>
+            <div class="valid-feedback">Looks good!</div>
           </div>
         </div>
 
         <div>
           <label for="image" class="form-label">Image</label>
           <input
+            required
             type="text"
             class="form-control"
             name="listing[image]"
             placeholder="enter image url/link"
           />
+          <div class="invalid-feedback">Please enter image url link.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <div>
           <label for="location" class="form-label">Location</label>
           <input
+            required
             type="text"
             class="form-control"
             name="listing[location]"
             placeholder="jaipur, Rajasthan"
           />
+          <div class="invalid-feedback">Please enter location.</div>
+          <div class="valid-feedback">Looks good!</div>
         </div>
 
         <button class="btn btn-dark mt-2 ad-btn" type="submit">submit</button>
